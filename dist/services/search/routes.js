@@ -18,6 +18,7 @@ exports.default = [
         handler: [
             checks_1.checkSearchParams,
             ({ query }, res) => __awaiter(void 0, void 0, void 0, function* () {
+                //@ts-ignore
                 const result = yield SearchController_1.getPlacesByName(query.q);
                 res.status(200).send(result);
             })
